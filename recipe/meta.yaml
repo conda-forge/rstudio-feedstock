@@ -14,7 +14,7 @@ source:
     - sigstksz_gcc11.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   rpaths:
     - lib/R/lib/
