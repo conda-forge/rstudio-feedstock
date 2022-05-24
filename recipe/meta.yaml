@@ -1,11 +1,16 @@
-{% set version = "2022.02.2" %}
+{% set version = "2022.02.2+485" %}
+{% set pkg_version = version.split("+")[0] %}
+# reset the below to 0 when bumping upstream build num.
+{% set build = 1 %}
+{% set upstream_build_num = version.split("+")[1] | int %}
+
 
 package:
   name: rstudio
-  version: {{ version }}
+  version: {{ pkg_version }}
 
 source:
-  url: "https://github.com/rstudio/rstudio/archive/refs/tags/v{{ version }}+485.tar.gz"
+  url: "https://github.com/rstudio/rstudio/archive/refs/tags/v{{ version }}.tar.gz"
   sha256: a9351fcd3bb4ab1f7d526b289dad06f02800d5b883655d9a49fa4b7c1ce6b299
   patches:
     - 0001-fix-soci.patch
@@ -14,7 +19,7 @@ source:
     - sigstksz_gcc11.patch
 
 build:
-  number: 0
+  number: {{ upstream_build_num + build }}
   skip: true  # [win]
   rpaths:
     - lib/R/lib/
