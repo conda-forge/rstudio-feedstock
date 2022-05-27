@@ -19,7 +19,7 @@ libuuid:
 openssl:
 - 1.1.1
 pango:
-- '1.48'
+- '1.50'
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
