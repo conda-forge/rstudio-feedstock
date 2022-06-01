@@ -15,8 +15,6 @@ source:
   patches:
     - 0001-fix-soci.patch
     - 0002-no-static-linking.patch
-    ## from https://aur.archlinux.org/packages/rstudio-desktop
-    - sigstksz_gcc11.patch
 
 build:
   number: {{ upstream_build_num + build }}
