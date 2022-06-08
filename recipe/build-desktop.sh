@@ -53,7 +53,7 @@ ln -sfT ${PREFIX}/share/hunspell_dictionaries dictionaries
 ln -sfT ${PREFIX}/lib/mathjax mathjax-27
 popd
 
-cmake -S . -B build \
+cmake -S . -B build ${CMAKE_ARGS} \
       -DRSTUDIO_TARGET=Desktop \
       -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX="${PREFIX}/lib/rstudio" \
