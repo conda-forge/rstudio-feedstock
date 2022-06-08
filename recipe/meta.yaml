@@ -105,9 +105,7 @@ outputs:
         - hunspell-en
         - pandoc
         - mathjax <3.0
-        ## probably we can relax this later
-        ## see https://github.com/conda-forge/yaml-cpp-feedstock/pull/13
-        - yaml-cpp <0.7
+        - yaml-cpp
         - jpeg  # [osx]
         - libpng  # [osx]
       run:
