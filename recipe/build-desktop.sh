@@ -28,6 +28,7 @@ export SOCI_POSTGRESQL_LIB=${PREFIX}/lib/libsoci_postgresql.so
 export SOCI_SQLITE_LIB=${PREFIX}/lib/libsoci_sqlite3.so
 export RSTUDIO_DISABLE_CRASHPAD=1
 export RSTUDIO_CRASHPAD_ENABLED=FALSE
+export YAML_CPP_INCLUDE_DIR=${PREFIX}/include
 
 ## Instead of installing dependencies as instructed by the upstream
 ## build documentation we create symlinks in the expected locations
@@ -59,6 +60,7 @@ cmake -S . -B build ${CMAKE_ARGS} \
       -DCMAKE_INSTALL_PREFIX="${PREFIX}/lib/rstudio" \
       -DRSTUDIO_USE_SYSTEM_BOOST=yes \
       -DRSTUDIO_USE_SYSTEM_YAML_CPP=yes \
+      -DYAML_CPP_INCLUDE_DIR=${PREFIX}/include \
       -DQT_QMAKE_EXECUTABLE="${PREFIX}/bin/qmake" \
       -DBoost_NO_BOOST_CMAKE=OFF \
       -DBOOST_ROOT=$PREFIX \

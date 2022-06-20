@@ -93,7 +93,7 @@ outputs:
         - soci-core
         - soci-sqlite
         - libpq
-        - qt-main >=5.15.4
+        - qt-main
         - qt-webengine
         - libuuid  # [linux]
         - bzip2
@@ -131,7 +131,7 @@ outputs:
         - soci-core
         - soci-sqlite
         - libpq
-        - qt-main >=5.15.4
+        - qt-main
         - qt-webengine
         - libuuid  # [linux]
         - bzip2
