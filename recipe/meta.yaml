@@ -87,6 +87,7 @@ outputs:
         - xorg-libxscrnsaver  # [linux]
         - xorg-libxi  # [linux]
         - xorg-libxtst  # [linux]
+        - xorg-libxrandr  # [linux]
         - openjdk
         - boost-cpp
         - soci-postgresql
@@ -125,6 +126,7 @@ outputs:
         - xorg-libxscrnsaver  # [linux]
         - xorg-libxi  # [linux]
         - xorg-libxtst  # [linux]
+        - xorg-libxrandr  # [linux]
         - openjdk
         - boost-cpp
         - soci-postgresql
