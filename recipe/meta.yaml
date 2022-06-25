@@ -1,7 +1,7 @@
 {% set version = "2022.02.3+492" %}
 {% set pkg_version = version.split("+")[0] %}
 # reset the below to 0 when bumping upstream build num.
-{% set build = 0 %}
+{% set build = 1 %}
 {% set upstream_build_num = version.split("+")[1] | int %}
 
 
@@ -87,13 +87,15 @@ outputs:
         - xorg-libxscrnsaver  # [linux]
         - xorg-libxi  # [linux]
         - xorg-libxtst  # [linux]
+        - xorg-libxrandr  # [linux]
         - openjdk
         - boost-cpp
         - soci-postgresql
         - soci-core
         - soci-sqlite
         - libpq
-        - qt
+        - qt-main
+        - qt-webengine
         - libuuid  # [linux]
         - bzip2
         - zlib
@@ -105,7 +107,7 @@ outputs:
         - hunspell-en
         - pandoc
         - mathjax <3.0
-        - yaml-cpp
+        - yaml-cpp <0.7
         - jpeg  # [osx]
         - libpng  # [osx]
       run:
@@ -124,13 +126,15 @@ outputs:
         - xorg-libxscrnsaver  # [linux]
         - xorg-libxi  # [linux]
         - xorg-libxtst  # [linux]
+        - xorg-libxrandr  # [linux]
         - openjdk
         - boost-cpp
         - soci-postgresql
         - soci-core
         - soci-sqlite
         - libpq
-        - qt
+        - qt-main
+        - qt-webengine
         - libuuid  # [linux]
         - bzip2
         - zlib
@@ -142,7 +146,7 @@ outputs:
         - hunspell-en
         - pandoc
         - mathjax <3.0
-        - yaml-cpp
+        - yaml-cpp <0.7
         - jpeg  # [osx]
         - libpng  # [osx]
     test:

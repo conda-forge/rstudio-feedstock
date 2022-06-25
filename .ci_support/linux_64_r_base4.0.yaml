@@ -29,8 +29,6 @@ pin_run_as_build:
     max_pin: x
   pango:
     max_pin: x.x
-  qt:
-    max_pin: x.x
   r-base:
     min_pin: x.x
     max_pin: x.x
@@ -38,8 +36,8 @@ pin_run_as_build:
     max_pin: x
   zlib:
     max_pin: x.x
-qt:
-- '5.12'
+qt_main:
+- '5.15'
 r_base:
 - '4.0'
 sqlite:
