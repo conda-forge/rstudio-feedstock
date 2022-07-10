@@ -1,3 +1,6 @@
 MACOSX_SDK_VERSION:        # [osx and x86_64]
   - "10.12"                # [osx and x86_64]
 
+# upstream requires at least 1.78 as of v2022.07
+boost_cpp:
+  - 1.78.0
