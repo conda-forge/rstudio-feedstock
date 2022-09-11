@@ -54,6 +54,10 @@ ln -sfT ${PREFIX}/share/hunspell_dictionaries dictionaries
 ln -sfT ${PREFIX}/lib/mathjax mathjax-27
 popd
 
+if [[ $target_platform =~ .*osx.* ]]; then
+	CMAKE_ARGS+=" -DLIBR_LIBRARIES=${PREFIX}/lib/R/lib -DLIBR_HOME=${PREFIX}/lib/R "
+fi
+
 cmake -S . -B build ${CMAKE_ARGS} \
       -DRSTUDIO_TARGET=Desktop \
       -DCMAKE_BUILD_TYPE=Release \
