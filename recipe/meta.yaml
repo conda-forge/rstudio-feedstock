@@ -110,6 +110,7 @@ outputs:
         - yaml-cpp <0.7
         - jpeg  # [osx]
         - libpng  # [osx]
+        - quarto
       run:
         - r-base
         - r-purrr
@@ -149,6 +150,7 @@ outputs:
         - yaml-cpp <0.7
         - jpeg  # [osx]
         - libpng  # [osx]
+        - {{ pin_compatible("quarto", max_pin="x.x") }}
     test:
       commands:
         - test -f ${PREFIX}/lib/rstudio/bin/rstudio  # [linux]

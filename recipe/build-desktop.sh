@@ -48,6 +48,9 @@ popd
 pushd dependencies
 install -d pandoc/${_pandocver}
 install -d node
+install -d quarto/bin/tools
+ln -sfT ${PREFIX}/bin/quarto quarto/bin/quarto
+ln -sfT ${PREFIX}/bin/pandoc quarto/bin/tools/pandoc
 ln -sfT ${PREFIX}/bin/pandoc pandoc/${_pandocver}/pandoc
 ln -sfT ${BUILD_PREFIX} node/${_nodever}
 ln -sfT ${PREFIX}/share/hunspell_dictionaries dictionaries
@@ -70,7 +73,7 @@ cmake -S . -B build ${CMAKE_ARGS} \
       -DBOOST_ROOT=$PREFIX \
       -DBOOST_INCLUDEDIR=${PREFIX}/include/boost \
       -DBOOST_LIBRARYDIR=${PREFIX}/lib \
-      -DQUARTO_ENABLED=FALSE \
+      -DQUARTO_ENABLED=TRUE \
       -DRSTUDIO_DISABLE_CRASHPAD=1 \
       -DRSTUDIO_CRASHPAD_ENABLED=FALSE \
       -DRSTUDIO_BUNDLE_QT=FALSE \
