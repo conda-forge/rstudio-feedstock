@@ -49,6 +49,7 @@ pushd dependencies
 install -d pandoc/${_pandocver}
 install -d node
 install -d quarto/bin/tools
+install -d quarto/share
 ln -sfT ${PREFIX}/bin/quarto quarto/bin/quarto
 ln -sfT ${PREFIX}/bin/pandoc quarto/bin/tools/pandoc
 ln -sfT ${PREFIX}/bin/pandoc pandoc/${_pandocver}/pandoc
