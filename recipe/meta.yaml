@@ -1,7 +1,7 @@
-{% set version = "2022.02.3+492" %}
+{% set version = "2022.07.1+554" %}
 {% set pkg_version = version.split("+")[0] %}
 # reset the below to 0 when bumping upstream build num.
-{% set build = 1 %}
+{% set build = 0 %}
 {% set upstream_build_num = version.split("+")[1] | int %}
 
 
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/rstudio/rstudio/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e0e520d992445db85dc30bdfe3fb6477f50605ce96f0b89eac19b618860032d9
+  sha256: 1c3fd3fc64e3553ec1ec35758d177a3d4713ae5203493291d7b3b622478f4185
   patches:
     - 0001-fix-soci.patch
     - 0002-no-static-linking.patch
@@ -110,6 +110,7 @@ outputs:
         - yaml-cpp <0.7
         - jpeg  # [osx]
         - libpng  # [osx]
+        - quarto
       run:
         - r-base
         - r-purrr
@@ -149,6 +150,7 @@ outputs:
         - yaml-cpp <0.7
         - jpeg  # [osx]
         - libpng  # [osx]
+        - {{ pin_compatible("quarto", max_pin="x.x") }}
     test:
       commands:
         - test -f ${PREFIX}/lib/rstudio/bin/rstudio  # [linux]
