@@ -27,20 +27,8 @@ pango:
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
-  bzip2:
-    max_pin: x
-  jpeg:
-    max_pin: x
-  libpng:
-    max_pin: x.x
-  pango:
-    max_pin: x.x
   r-base:
     min_pin: x.x
-    max_pin: x.x
-  sqlite:
-    max_pin: x
-  zlib:
     max_pin: x.x
 qt_main:
 - '5.15'
