@@ -19,6 +19,9 @@ source:
 build:
   number: {{ upstream_build_num + build }}
   skip: true  # [win]
+  # nodejs 14 is not co-installable with openssl 3;
+  # also, upstream moved to 16 already
+  skip: true  # [nodejs == "14"]
   rpaths:
     - lib/R/lib/
     - lib/rstudio/lib
@@ -49,6 +52,7 @@ outputs:
     script: build-desktop.sh
     build:
       skip: true  # [win]
+      skip: true  # [nodejs == "14"]
       rpaths:
         - lib/R/lib/
         - lib/rstudio/lib
