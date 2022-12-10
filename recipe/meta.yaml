@@ -36,7 +36,7 @@ requirements:
     - coreutils  # [osx]
     - patchelf  # [linux]
     - unzip
-    - nodejs 14
+    - nodejs
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
@@ -65,7 +65,7 @@ outputs:
         - coreutils  # [osx]
         - patchelf  # [linux]
         - unzip
-        - nodejs =14
+        - nodejs
         - {{ cdt('mesa-libgl-devel') }}  # [linux]
         - {{ cdt('mesa-dri-drivers') }}  # [linux]
         - {{ cdt('libselinux') }}  # [linux]
