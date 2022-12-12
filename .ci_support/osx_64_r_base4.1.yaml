@@ -18,6 +18,8 @@ jpeg:
 - '9'
 libpng:
 - '1.6'
+libpq:
+- '15'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
