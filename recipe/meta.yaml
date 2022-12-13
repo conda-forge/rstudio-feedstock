@@ -19,6 +19,9 @@ source:
 build:
   number: {{ upstream_build_num + build }}
   skip: true  # [win]
+  # nodejs 14 is not co-installable with openssl 3;
+  # also, upstream moved to 16 already
+  skip: true  # [nodejs == 14]
   rpaths:
     - lib/R/lib/
     - lib/rstudio/lib
@@ -36,7 +39,7 @@ requirements:
     - coreutils  # [osx]
     - patchelf  # [linux]
     - unzip
-    - nodejs 14
+    - nodejs
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
@@ -49,6 +52,7 @@ outputs:
     script: build-desktop.sh
     build:
       skip: true  # [win]
+      skip: true  # [nodejs == 14]
       rpaths:
         - lib/R/lib/
         - lib/rstudio/lib
@@ -65,7 +69,7 @@ outputs:
         - coreutils  # [osx]
         - patchelf  # [linux]
         - unzip
-        - nodejs =14
+        - nodejs
         - {{ cdt('mesa-libgl-devel') }}  # [linux]
         - {{ cdt('mesa-dri-drivers') }}  # [linux]
         - {{ cdt('libselinux') }}  # [linux]

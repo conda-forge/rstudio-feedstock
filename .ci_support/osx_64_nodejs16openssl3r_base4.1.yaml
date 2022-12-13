@@ -1,0 +1,46 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+MACOSX_SDK_VERSION:
+- '10.13'
+boost_cpp:
+- 1.78.0
+bzip2:
+- '1'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '14'
+jpeg:
+- '9'
+libpng:
+- '1.6'
+libpq:
+- '15'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+nodejs:
+- '16'
+openssl:
+- '3'
+pango:
+- '1.50'
+pin_run_as_build:
+  boost-cpp:
+    max_pin: x.x.x
+  r-base:
+    min_pin: x.x
+    max_pin: x.x
+qt_main:
+- '5.15'
+r_base:
+- '4.1'
+sqlite:
+- '3'
+target_platform:
+- osx-64
+zlib:
+- '1.2'
