@@ -1,0 +1,42 @@
+boost_cpp:
+- 1.78.0
+bzip2:
+- '1'
+cdt_name:
+- cos6
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '11'
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
+libpq:
+- '15'
+libuuid:
+- '2'
+nodejs:
+- '14'
+openssl:
+- 1.1.1
+pango:
+- '1.50'
+pin_run_as_build:
+  boost-cpp:
+    max_pin: x.x.x
+  r-base:
+    min_pin: x.x
+    max_pin: x.x
+qt_main:
+- '5.15'
+r_base:
+- '4.1'
+sqlite:
+- '3'
+target_platform:
+- linux-64
+zlib:
+- '1.2'
