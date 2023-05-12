@@ -8,29 +8,17 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
-      osx_64_nodejs16openssl1.1.1r_base4.1:
-        CONFIG: osx_64_nodejs16openssl1.1.1r_base4.1
+      osx_64_nodejs16r_base4.1:
+        CONFIG: osx_64_nodejs16r_base4.1
         UPLOAD_PACKAGES: 'True'
-      osx_64_nodejs16openssl1.1.1r_base4.2:
-        CONFIG: osx_64_nodejs16openssl1.1.1r_base4.2
+      osx_64_nodejs16r_base4.2:
+        CONFIG: osx_64_nodejs16r_base4.2
         UPLOAD_PACKAGES: 'True'
-      osx_64_nodejs16openssl3r_base4.1:
-        CONFIG: osx_64_nodejs16openssl3r_base4.1
+      osx_64_nodejs18r_base4.1:
+        CONFIG: osx_64_nodejs18r_base4.1
         UPLOAD_PACKAGES: 'True'
-      osx_64_nodejs16openssl3r_base4.2:
-        CONFIG: osx_64_nodejs16openssl3r_base4.2
-        UPLOAD_PACKAGES: 'True'
-      osx_64_nodejs18openssl1.1.1r_base4.1:
-        CONFIG: osx_64_nodejs18openssl1.1.1r_base4.1
-        UPLOAD_PACKAGES: 'True'
-      osx_64_nodejs18openssl1.1.1r_base4.2:
-        CONFIG: osx_64_nodejs18openssl1.1.1r_base4.2
-        UPLOAD_PACKAGES: 'True'
-      osx_64_nodejs18openssl3r_base4.1:
-        CONFIG: osx_64_nodejs18openssl3r_base4.1
-        UPLOAD_PACKAGES: 'True'
-      osx_64_nodejs18openssl3r_base4.2:
-        CONFIG: osx_64_nodejs18openssl3r_base4.2
+      osx_64_nodejs18r_base4.2:
+        CONFIG: osx_64_nodejs18r_base4.2
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 

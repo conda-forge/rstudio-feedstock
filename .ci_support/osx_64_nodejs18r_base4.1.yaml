@@ -13,7 +13,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '15'
 jpeg:
 - '9'
 libpng:
@@ -37,7 +37,7 @@ pin_run_as_build:
 qt_main:
 - '5.15'
 r_base:
-- '4.2'
+- '4.1'
 sqlite:
 - '3'
 target_platform:
