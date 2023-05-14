@@ -13,9 +13,9 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
-jpeg:
-- '9'
+- '15'
+libjpeg_turbo:
+- 2.1.5
 libpng:
 - '1.6'
 libpq:
@@ -23,7 +23,7 @@ libpq:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 nodejs:
-- '18'
+- '16'
 openssl:
 - '3'
 pango:
@@ -37,7 +37,7 @@ pin_run_as_build:
 qt_main:
 - '5.15'
 r_base:
-- '4.2'
+- '4.1'
 sqlite:
 - '3'
 target_platform:
