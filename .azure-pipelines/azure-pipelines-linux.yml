@@ -8,20 +8,12 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_nodejs16r_base4.1:
-        CONFIG: linux_64_nodejs16r_base4.1
+      linux_64_nodejs16:
+        CONFIG: linux_64_nodejs16
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs16r_base4.2:
-        CONFIG: linux_64_nodejs16r_base4.2
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs18r_base4.1:
-        CONFIG: linux_64_nodejs18r_base4.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs18r_base4.2:
-        CONFIG: linux_64_nodejs18r_base4.2
+      linux_64_nodejs18:
+        CONFIG: linux_64_nodejs18
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
