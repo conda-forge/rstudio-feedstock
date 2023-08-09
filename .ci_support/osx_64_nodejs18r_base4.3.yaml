@@ -14,8 +14,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '15'
-jpeg:
-- '10'
+libjpeg_turbo:
+- 2.1.5
 libpng:
 - '1.6'
 libpq:
