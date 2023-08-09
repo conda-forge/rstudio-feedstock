@@ -1,25 +1,29 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+MACOSX_SDK_VERSION:
+- '10.13'
 boost_cpp:
 - 1.78.0
 bzip2:
 - '1'
-cdt_name:
-- cos6
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
-- '11'
-docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- '15'
+jpeg:
+- '10'
+libpng:
+- '1.6'
 libpq:
 - '15'
-libuuid:
-- '2'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 nodejs:
-- '18'
+- '16'
 openssl:
 - '3'
 pango:
@@ -33,10 +37,10 @@ pin_run_as_build:
 qt_main:
 - '5.15'
 r_base:
-- '4.2'
+- '4.3'
 sqlite:
 - '3'
 target_platform:
-- linux-64
+- osx-64
 zlib:
 - '1.2'
