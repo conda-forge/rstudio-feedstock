@@ -36,16 +36,16 @@ requirements:
     - yarn
     - wget
     - ripgrep
-    - coreutils  # [osx]
-    - patchelf  # [linux]
+    - coreutils                      # [osx]
+    - patchelf                       # [linux]
     - unzip
     - nodejs
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
+    - {{ cdt('libselinux') }}        # [linux]
+    - {{ cdt('libxdamage') }}        # [linux]
+    - {{ cdt('libxxf86vm') }}        # [linux]
+    - {{ cdt('libxext') }}           # [linux]
 
 outputs:
   - name: rstudio-desktop
@@ -66,16 +66,16 @@ outputs:
         - yarn
         - wget
         - ripgrep
-        - coreutils  # [osx]
-        - patchelf  # [linux]
+        - coreutils                      # [osx]
+        - patchelf                       # [linux]
         - unzip
         - nodejs
         - {{ cdt('mesa-libgl-devel') }}  # [linux]
         - {{ cdt('mesa-dri-drivers') }}  # [linux]
-        - {{ cdt('libselinux') }}  # [linux]
-        - {{ cdt('libxdamage') }}  # [linux]
-        - {{ cdt('libxxf86vm') }}  # [linux]
-        - {{ cdt('libxext') }}     # [linux]
+        - {{ cdt('libselinux') }}        # [linux]
+        - {{ cdt('libxdamage') }}        # [linux]
+        - {{ cdt('libxxf86vm') }}        # [linux]
+        - {{ cdt('libxext') }}           # [linux]
       host:
         - r-base
         - r-purrr
@@ -85,13 +85,13 @@ outputs:
         - r-xml2
         - r-yaml
         - r-rstudioapi
-        - libxkbcommon  # [linux]
+        - libxkbcommon        # [linux]
         - xorg-libxcomposite  # [linux]
-        - xorg-libxcursor  # [linux]
+        - xorg-libxcursor     # [linux]
         - xorg-libxscrnsaver  # [linux]
-        - xorg-libxi  # [linux]
-        - xorg-libxtst  # [linux]
-        - xorg-libxrandr  # [linux]
+        - xorg-libxi          # [linux]
+        - xorg-libxtst        # [linux]
+        - xorg-libxrandr      # [linux]
         - openjdk
         - boost-cpp
         - soci-postgresql
@@ -100,20 +100,20 @@ outputs:
         - libpq
         - qt-main
         - qt-webengine
-        - libuuid  # [linux]
+        - libuuid             # [linux]
         - bzip2
         - zlib
         - pango
         - sqlite
-        - libcups  # [linux]
+        - libcups             # [linux]
         - openssl
         - hunspell
         - hunspell-en
         - pandoc
         - mathjax <3.0
         - yaml-cpp <0.7
-        - jpeg  # [osx]
-        - libpng  # [osx]
+        - libjpeg-turbo       # [osx]
+        - libpng              # [osx]
         - quarto
       run:
         - r-base
@@ -124,14 +124,14 @@ outputs:
         - r-xml2
         - r-yaml
         - r-rstudioapi
-        - libxkbcommon  # [linux]
-        - libxkbcommon  # [linux]
+        - libxkbcommon        # [linux]
+        - libxkbcommon        # [linux]
         - xorg-libxcomposite  # [linux]
-        - xorg-libxcursor  # [linux]
+        - xorg-libxcursor     # [linux]
         - xorg-libxscrnsaver  # [linux]
-        - xorg-libxi  # [linux]
-        - xorg-libxtst  # [linux]
-        - xorg-libxrandr  # [linux]
+        - xorg-libxi          # [linux]
+        - xorg-libxtst        # [linux]
+        - xorg-libxrandr      # [linux]
         - openjdk
         - boost-cpp
         - soci-postgresql
@@ -140,20 +140,20 @@ outputs:
         - libpq
         - qt-main
         - qt-webengine
-        - libuuid  # [linux]
+        - libuuid             # [linux]
         - bzip2
         - zlib
         - pango
         - sqlite
-        - libcups  # [linux]
+        - libcups             # [linux]
         - openssl
         - hunspell
         - hunspell-en
         - pandoc
         - mathjax <3.0
         - yaml-cpp <0.7
-        - jpeg  # [osx]
-        - libpng  # [osx]
+        - libjpeg-turbo       # [osx]
+        - libpng              # [osx]
         - {{ pin_compatible("quarto", max_pin="x.x") }}
     test:
       commands:
