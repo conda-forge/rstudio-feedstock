@@ -13,8 +13,9 @@ source:
   url: https://github.com/rstudio/rstudio/archive/refs/tags/v{{ version }}.tar.gz
   sha256: e4f3503e2ad4229301360f56fd5288e5c8e769c490073dae7fe40366237ecce0
   patches:
-    - 0001-fix-soci.patch
-    - 0002-no-static-linking.patch
+    - patches/0001-fix-soci.patch
+    - patches/0002-don-t-use-static-linking.patch
+    - patches/0003-include-set-in-Thread.hpp.patch
 
 build:
   number: {{ upstream_build_num + build }}

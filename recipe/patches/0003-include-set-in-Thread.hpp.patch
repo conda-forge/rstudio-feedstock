@@ -1,0 +1,21 @@
+From 02bfca4e0e447a74f5cd002cb5cd42454175bd97 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Mon, 9 Oct 2023 22:28:21 +1100
+Subject: [PATCH 3/3] include <set> in Thread.hpp
+
+---
+ src/cpp/core/include/core/Thread.hpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/cpp/core/include/core/Thread.hpp b/src/cpp/core/include/core/Thread.hpp
+index 9ca7f33952..8b439c39b0 100644
+--- a/src/cpp/core/include/core/Thread.hpp
++++ b/src/cpp/core/include/core/Thread.hpp
+@@ -16,6 +16,7 @@
+ #ifndef CORE_THREAD_HPP
+ #define CORE_THREAD_HPP
+ 
++#include <set>
+ #include <queue>
+ 
+ #include <boost/utility.hpp>
