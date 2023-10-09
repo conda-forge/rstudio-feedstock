@@ -29,6 +29,7 @@ export SOCI_SQLITE_LIB=${PREFIX}/lib/libsoci_sqlite3.so
 export RSTUDIO_DISABLE_CRASHPAD=1
 export RSTUDIO_CRASHPAD_ENABLED=FALSE
 export YAML_CPP_INCLUDE_DIR=${PREFIX}/include
+export OPENSSL_ROOT_DIR=$PREFIX
 
 ## Instead of installing dependencies as instructed by the upstream
 ## build documentation we create symlinks in the expected locations
