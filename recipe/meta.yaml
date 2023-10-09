@@ -1,7 +1,7 @@
-{% set version = "2022.12.0+353" %}
+{% set version = "2023.09.0+463" %}
 {% set pkg_version = version.split("+")[0] %}
 # reset the below to 0 when bumping upstream build num.
-{% set build = 2 %}
+{% set build = 0 %}
 {% set upstream_build_num = version.split("+")[1] | int %}
 
 
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/rstudio/rstudio/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e4f3503e2ad4229301360f56fd5288e5c8e769c490073dae7fe40366237ecce0
+  sha256: b9bf940513ee7a2d96d636963a400e60bfc263865f9b90e69866f5164a53a684
   patches:
     - patches/0001-fix-soci.patch
     - patches/0002-don-t-use-static-linking.patch
