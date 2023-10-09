@@ -8,46 +8,25 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_nodejs16openssl1.1.1r_base4.1:
-        CONFIG: linux_64_nodejs16openssl1.1.1r_base4.1
+      linux_64_nodejs18r_base4.2:
+        CONFIG: linux_64_nodejs18r_base4.2
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs16openssl1.1.1r_base4.2:
-        CONFIG: linux_64_nodejs16openssl1.1.1r_base4.2
+      linux_64_nodejs18r_base4.3:
+        CONFIG: linux_64_nodejs18r_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs16openssl3r_base4.1:
-        CONFIG: linux_64_nodejs16openssl3r_base4.1
+      linux_64_nodejs20r_base4.2:
+        CONFIG: linux_64_nodejs20r_base4.2
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs16openssl3r_base4.2:
-        CONFIG: linux_64_nodejs16openssl3r_base4.2
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs18openssl1.1.1r_base4.1:
-        CONFIG: linux_64_nodejs18openssl1.1.1r_base4.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs18openssl1.1.1r_base4.2:
-        CONFIG: linux_64_nodejs18openssl1.1.1r_base4.2
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs18openssl3r_base4.1:
-        CONFIG: linux_64_nodejs18openssl3r_base4.1
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs18openssl3r_base4.2:
-        CONFIG: linux_64_nodejs18openssl3r_base4.2
+      linux_64_nodejs20r_base4.3:
+        CONFIG: linux_64_nodejs20r_base4.3
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
 
   steps:
-  - script: |
-         rm -rf /opt/ghc
-         df -h
-    displayName: Manage disk space
-
   # configure qemu binfmt-misc running.  This allows us to run docker containers
   # embedded qemu-static
   - script: |
