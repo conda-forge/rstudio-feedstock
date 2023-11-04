@@ -19,7 +19,7 @@ libjpeg_turbo:
 libpng:
 - '1.6'
 libpq:
-- '15'
+- '16'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 nodejs:
