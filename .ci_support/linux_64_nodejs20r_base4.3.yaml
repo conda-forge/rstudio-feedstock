@@ -15,7 +15,7 @@ docker_image:
 libboost_devel:
 - '1.82'
 libpq:
-- '15'
+- '16'
 libuuid:
 - '2'
 nodejs:
