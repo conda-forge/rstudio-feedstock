@@ -15,7 +15,7 @@ cxx_compiler_version:
 libboost_devel:
 - '1.82'
 libjpeg_turbo:
-- 2.1.5
+- '3'
 libpng:
 - '1.6'
 libpq:
