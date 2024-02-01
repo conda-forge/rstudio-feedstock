@@ -15,11 +15,11 @@ cxx_compiler_version:
 libboost_devel:
 - '1.82'
 libjpeg_turbo:
-- 2.1.5
+- '3'
 libpng:
 - '1.6'
 libpq:
-- '15'
+- '16'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 nodejs:
