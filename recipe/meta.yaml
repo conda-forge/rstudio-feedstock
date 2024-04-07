@@ -91,7 +91,7 @@ outputs:
         - xorg-libxi  # [linux]
         - xorg-libxtst  # [linux]
         - xorg-libxrandr  # [linux]
-        - openjdk
+        - openjdk <18
         - libboost-devel
         - soci-postgresql
         - soci-core
@@ -131,7 +131,7 @@ outputs:
         - xorg-libxi  # [linux]
         - xorg-libxtst  # [linux]
         - xorg-libxrandr  # [linux]
-        - openjdk
+        - openjdk <18
         - soci-postgresql
         - soci-core
         - soci-sqlite
