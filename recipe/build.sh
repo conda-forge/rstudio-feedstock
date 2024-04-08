@@ -84,7 +84,7 @@ cmake -S . -B build ${CMAKE_ARGS} \
       -DSOCI_POSTGRESQL_LIB=${PREFIX}/lib/libsoci_postgresql.$SONAME \
       -DSOCI_SQLITE_LIB=${PREFIX}/lib/libsoci_sqlite3.$SONAME
 
-make -j${CPU_COUNT} -C build install
+make -j ${CPU_COUNT} -C build install
 
 ## Put executable symlinks in bin and fixup some resource locations.
 if [[ $(uname) == Linux ]]
