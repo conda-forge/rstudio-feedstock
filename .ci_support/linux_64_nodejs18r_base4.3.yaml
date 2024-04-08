@@ -1,5 +1,9 @@
 bzip2:
 - '1'
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.12'
 cdt_name:
 - cos6
 channel_sources:
@@ -15,7 +19,7 @@ docker_image:
 libboost_devel:
 - '1.82'
 libpq:
-- '15'
+- '16'
 libuuid:
 - '2'
 nodejs:
@@ -36,5 +40,8 @@ sqlite:
 - '3'
 target_platform:
 - linux-64
+zip_keys:
+- - c_stdlib_version
+  - cdt_name
 zlib:
 - '1.2'
