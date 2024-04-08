@@ -36,11 +36,8 @@ export OPENSSL_ROOT_DIR=$PREFIX
 ## to the conda-forge equivalents
 pushd dependencies/common
 _pandocver=$(rg -o --pcre2 "(?<=PANDOC_VERSION=\").*(?=\"$)" install-pandoc)
-_nodever=$(rg -o --pcre2 "(?<=NODE_VERSION=\").*(?=\"$)" ../tools/rstudio-tools.sh)
 install -d pandoc/${_pandocver}
-install -d node
 ln -sfT ${PREFIX}/bin/pandoc pandoc/${_pandocver}/pandoc
-ln -sfT ${BUILD_PREFIX} node/${_nodever}
 ln -sfT ${PREFIX}/share/hunspell_dictionaries dictionaries
 ln -sfT ${PREFIX}/lib/mathjax mathjax-27
 popd
@@ -48,16 +45,20 @@ popd
 # Fix links for src/cpp/session/CMakeLists.txt
 pushd dependencies
 install -d pandoc/${_pandocver}
-install -d node
 install -d quarto/bin/tools
 install -d quarto/share
 ln -sfT ${PREFIX}/bin/quarto quarto/bin/quarto
 ln -sfT ${PREFIX}/bin/pandoc quarto/bin/tools/pandoc
 ln -sfT ${PREFIX}/bin/pandoc pandoc/${_pandocver}/pandoc
-ln -sfT ${BUILD_PREFIX} node/${_nodever}
 ln -sfT ${PREFIX}/share/hunspell_dictionaries dictionaries
 ln -sfT ${PREFIX}/lib/mathjax mathjax-27
 popd
+
+# we need panmirror in the right place, comes out of the quarto package
+./dependencies/common/install-panmirror
+rm -rf src/gwt/lib/quarto/apps/vscode
+
+export JDK_JAVA_OPTIONS="--add-opens=java.base/java.lang=ALL-UNNAMED"
 
 if [[ $target_platform =~ .*osx.* ]]; then
 	CMAKE_ARGS+=" -DLIBR_LIBRARIES=${PREFIX}/lib/R/lib -DLIBR_HOME=${PREFIX}/lib/R "
@@ -92,6 +93,7 @@ then
     ln -sfTr ${PREFIX}/lib/rstudio/resources ${PREFIX}/lib/rstudio/bin/resources
     ln -sfTr ${PREFIX}/lib/rstudio/bin/rstudio ${PREFIX}/bin/rstudio
 fi
+
 if [[ $(uname) == Darwin ]]
 then
     ln -sfr ${PREFIX}/lib/rstudio/RStudio.app/Contents/MacOS/RStudio ${PREFIX}/bin/rstudio

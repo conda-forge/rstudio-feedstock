@@ -22,7 +22,6 @@ build:
     - lib/rstudio/lib
     - lib/
 
-
 build:
   skip: true  # [win]
   rpaths:
@@ -153,4 +152,5 @@ extra:
   recipe-maintainers:
     - izahn
     - h-vetinari
+    - wolfv
   feedstock-name: rstudio

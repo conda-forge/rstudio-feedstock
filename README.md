@@ -196,4 +196,5 @@ Feedstock Maintainers
 
 * [@h-vetinari](https://github.com/h-vetinari/)
 * [@izahn](https://github.com/izahn/)
+* [@wolfv](https://github.com/wolfv/)
 
