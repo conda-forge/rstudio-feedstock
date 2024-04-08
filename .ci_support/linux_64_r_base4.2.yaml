@@ -22,8 +22,6 @@ libpq:
 - '16'
 libuuid:
 - '2'
-nodejs:
-- '20'
 openssl:
 - '3'
 pango:
@@ -35,7 +33,7 @@ pin_run_as_build:
 qt_main:
 - '5.15'
 r_base:
-- '4.3'
+- '4.2'
 sqlite:
 - '3'
 target_platform:

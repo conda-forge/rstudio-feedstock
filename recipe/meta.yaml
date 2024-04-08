@@ -42,7 +42,7 @@ requirements:
     - coreutils  # [osx]
     - patchelf  # [linux]
     - unzip
-    - nodejs
+    - nodejs >=18
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
     - {{ cdt('libselinux') }}  # [linux]
