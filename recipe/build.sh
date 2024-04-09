@@ -61,7 +61,7 @@ git clone --branch release/rstudio-mountain-hydrangea https://github.com/quarto-
 
 # try to run yarn build so we don't fail much later on
 yarn --cwd ${QUARTO_DIR}/apps/panmirror install
-yarn --cwd ${QUARTO_DIR}/apps/panmirror build --minify true --source-map true
+yarn --cwd ${QUARTO_DIR}/apps/panmirror build --minify true --sourcemap true
 
 export JDK_JAVA_OPTIONS="--add-opens=java.base/java.lang=ALL-UNNAMED"
 
