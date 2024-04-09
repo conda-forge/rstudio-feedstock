@@ -55,8 +55,12 @@ ln -sfT ${PREFIX}/lib/mathjax mathjax-27
 popd
 
 # we need panmirror in the right place, comes out of the quarto package
-./dependencies/common/install-panmirror
-rm -rf src/gwt/lib/quarto/apps/vscode
+QUARTO_DIR="${SRC_DIR}/src/gwt/lib/quarto"
+git clone --branch release/rstudio-mountain-hydrangea https://github.com/quarto-dev/quarto.git "$QUARTO_DIR"
+
+# try to run yarn build
+yarn --cwd ${QUARTO_DIR}/apps/panmirror install
+yarn --cwd ${QUARTO_DIR}/apps/panmirror build --minify true --source-map true
 
 export JDK_JAVA_OPTIONS="--add-opens=java.base/java.lang=ALL-UNNAMED"
 
