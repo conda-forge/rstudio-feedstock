@@ -55,10 +55,11 @@ ln -sfT ${PREFIX}/lib/mathjax mathjax-27
 popd
 
 # we need panmirror in the right place, comes out of the quarto package
+export YARN_ENABLE_IMMUTABLE_INSTALLS=false  # the lock file is updated by the build
 QUARTO_DIR="${SRC_DIR}/src/gwt/lib/quarto"
 git clone --branch release/rstudio-mountain-hydrangea https://github.com/quarto-dev/quarto.git "$QUARTO_DIR"
 
-# try to run yarn build
+# try to run yarn build so we don't fail much later on
 yarn --cwd ${QUARTO_DIR}/apps/panmirror install
 yarn --cwd ${QUARTO_DIR}/apps/panmirror build --minify true --source-map true
 
