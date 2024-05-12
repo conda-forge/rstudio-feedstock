@@ -1,17 +1,17 @@
-From 2bf47fbe30e14fb226d89c1a7327162d5a489145 Mon Sep 17 00:00:00 2001
+From 4b47bc8b178da63f503a21c5f09f53608383b01b Mon Sep 17 00:00:00 2001
 From: Ista Zahn <istazahn@gmail.com>
 Date: Fri, 18 Mar 2022 07:31:53 -0400
-Subject: [PATCH 2/3] don't use static linking
+Subject: [PATCH 2/2] don't use static linking
 
 ---
  src/cpp/CMakeLists.txt | 6 +++---
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/src/cpp/CMakeLists.txt b/src/cpp/CMakeLists.txt
-index 4ff419e763..3de6598135 100644
+index 1518ca2a0e..d4b70780a6 100644
 --- a/src/cpp/CMakeLists.txt
 +++ b/src/cpp/CMakeLists.txt
-@@ -234,9 +234,9 @@ include_directories(SYSTEM "${YAML_CPP_INCLUDE_DIR}")
+@@ -240,9 +240,9 @@ endif()
  # determine whether we should statically link boost. we always do this
  # unless we are building a non-packaged build on linux (in which case
  # boost dynamic libraries are presumed to be installed on the system ldpath)
