@@ -33,6 +33,7 @@ outputs:
         - lib/
     requirements:
       build:
+        - {{ stdlib('c') }}
         - {{ compiler('cxx') }}
         - make
         - cmake
