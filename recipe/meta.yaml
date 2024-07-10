@@ -1,7 +1,7 @@
-{% set version = "2023.12.1+402" %}
+{% set version = "2024.04.2+764" %}
 {% set pkg_version = version.split("+")[0] %}
 # reset the below to 0 when bumping upstream build num.
-{% set build = 1 %}
+{% set build = 0 %}
 {% set upstream_build_num = version.split("+")[1] | int %}
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/rstudio/rstudio/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 196d31094d580a74737fbf689d2d0b302da5fec13694aa1d63f8875d3e45e4dd
+  sha256: 89b0d6741b6bd4dac52fd8bd9372d4f1919c97dd41056a03c975d0570eaf439e
   patches:
     - patches/0001-boost-static-libs.patch
 
