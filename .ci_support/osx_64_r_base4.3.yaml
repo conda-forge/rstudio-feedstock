@@ -1,31 +1,35 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.13'
+MACOSX_SDK_VERSION:
+- '10.13'
 bzip2:
 - '1'
 c_stdlib:
-- sysroot
+- macosx_deployment_target
 c_stdlib_version:
-- '2.17'
-cdt_name:
-- cos7
+- '10.13'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
-- '12'
-docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- '16'
 libboost_devel:
 - '1.84'
+libjpeg_turbo:
+- '3'
+libpng:
+- '1.6'
 libpq:
 - '16'
-libuuid:
-- '2'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 openssl:
 - '3'
 pango:
-- '1.50'
+- '1'
 pin_run_as_build:
   r-base:
     min_pin: x.x
@@ -37,9 +41,6 @@ r_base:
 sqlite:
 - '3'
 target_platform:
-- linux-64
-zip_keys:
-- - c_stdlib_version
-  - cdt_name
+- osx-64
 zlib:
 - '1'
