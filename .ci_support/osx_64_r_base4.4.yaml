@@ -29,7 +29,7 @@ macos_machine:
 openssl:
 - '3'
 pango:
-- '1.50'
+- '1'
 pin_run_as_build:
   r-base:
     min_pin: x.x
@@ -37,7 +37,7 @@ pin_run_as_build:
 qt_main:
 - '5.15'
 r_base:
-- '4.3'
+- '4.4'
 sqlite:
 - '3'
 target_platform:
