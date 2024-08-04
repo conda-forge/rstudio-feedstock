@@ -33,6 +33,14 @@ outputs:
         - lib/
     requirements:
       build:
+        - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+        - r-rstudioapi               # [build_platform != target_platform]
+        - r-xml2                     # [build_platform != target_platform]
+        - r-testthat                 # [build_platform != target_platform]
+        - r-purrr                    # [build_platform != target_platform]
+        - r-yaml                     # [build_platform != target_platform]
+        - r-renv                     # [build_platform != target_platform]
+        - r-rmarkdown                # [build_platform != target_platform]
         - {{ stdlib('c') }}
         - {{ compiler('cxx') }}
         - make
