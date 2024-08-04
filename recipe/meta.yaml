@@ -12,6 +12,7 @@ source:
   sha256: 89b0d6741b6bd4dac52fd8bd9372d4f1919c97dd41056a03c975d0570eaf439e
   patches:
     - patches/0001-do-not-use-boost-statically.patch
+    - patches/0002-do-not-install-node.patch
 
 build:
   number: {{ upstream_build_num + build }}
