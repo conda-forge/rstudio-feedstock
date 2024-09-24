@@ -1,4 +1,4 @@
-{% set version = "2024.04.2+764" %}
+{% set version = "2024.09.0+375" %}
 {% set pkg_version = version.split("+")[0] %}
 {% set build = 0 %}
 {% set upstream_build_num = version.split("+")[1] | int %}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/rstudio/rstudio/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 89b0d6741b6bd4dac52fd8bd9372d4f1919c97dd41056a03c975d0570eaf439e
+  sha256: 8a29b77c53a3db8379d824a9f4a491843036003d105ed71981cd40fe39d2c8c8
   patches:
     - patches/0001-do-not-use-boost-statically.patch
     - patches/0002-do-not-install-node.patch
