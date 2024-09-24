@@ -55,10 +55,9 @@ ulimit -n 1024
 # run "conda smithy rerender" and this line will be updated
 # automatically.
 /usr/bin/sudo -n yum install -y mesa-libGL mesa-dri-drivers libselinux libXdamage libXfixes libXxf86vm libxcb libXft expat xorg-x11-proto pam-devel xorg-x11-server-Xvfb xorg-x11-server-Xorg libXcomposite libXcursor libXScrnSaver pciutils
+)
 
-
-
-)# make the build number clobber
+# make the build number clobber
 make_build_number "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 
 

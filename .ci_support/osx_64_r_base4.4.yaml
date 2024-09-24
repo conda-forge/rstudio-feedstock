@@ -15,7 +15,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '17'
 libboost_devel:
 - '1.84'
 libjpeg_turbo:
