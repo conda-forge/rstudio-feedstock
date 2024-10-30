@@ -79,6 +79,8 @@ outputs:
         - r-testthat
         - r-xml2
         - r-yaml
+        # build calls node-gyp which wants to import distutils
+        - setuptools
         - soci-core
         - soci-postgresql
         - soci-sqlite
