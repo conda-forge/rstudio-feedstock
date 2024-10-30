@@ -53,44 +53,44 @@ outputs:
         - {{ cdt('libxxf86vm') }}  # [linux]
         - {{ cdt('libxext') }}     # [linux]
       host:
+        - bzip2
+        - hunspell
+        - hunspell-en
+        - libboost-devel
+        - libcups           # [linux]
+        - libjpeg-turbo     # [osx]
+        - libpng            # [osx]
+        - libpq
+        - libuuid           # [linux]
+        - libxkbcommon      # [linux]
+        - pandoc
+        - mathjax
+        - openjdk
+        - openssl
+        - pango
+        - qt-main
+        - qt-webengine
+        - quarto
         - r-base
         - r-purrr
-        - r-rmarkdown
         - r-renv
+        - r-rmarkdown
+        - r-rstudioapi
         - r-testthat
         - r-xml2
         - r-yaml
-        - r-rstudioapi
-        - libxkbcommon  # [linux]
-        - xorg-libxcomposite  # [linux]
-        - xorg-libxcursor  # [linux]
-        - xorg-libxscrnsaver  # [linux]
-        - xorg-libxi  # [linux]
-        - xorg-libxtst  # [linux]
-        - xorg-libxrandr  # [linux]
-        - openjdk
-        - libboost-devel
-        - soci-postgresql
         - soci-core
+        - soci-postgresql
         - soci-sqlite
-        - libpq
-        - qt-main
-        - qt-webengine
-        - libuuid  # [linux]
-        - bzip2
-        - zlib
-        - pango
         - sqlite
-        - libcups  # [linux]
-        - openssl
-        - hunspell
-        - hunspell-en
-        - pandoc
-        - mathjax
+        - xorg-libxcomposite    # [linux]
+        - xorg-libxcursor       # [linux]
+        - xorg-libxi            # [linux]
+        - xorg-libxrandr        # [linux]
+        - xorg-libxscrnsaver    # [linux]
+        - xorg-libxtst          # [linux]
         - yaml-cpp
-        - libjpeg-turbo   # [osx]
-        - libpng  # [osx]
-        - quarto
+        - zlib
       run:
         - hunspell
         - hunspell-en
