@@ -92,7 +92,6 @@ outputs:
         - libpng  # [osx]
         - quarto
       run:
-        - r-base
         - r-purrr
         - r-rmarkdown
         - r-renv
@@ -100,35 +99,14 @@ outputs:
         - r-xml2
         - r-yaml
         - r-rstudioapi
-        - libxkbcommon  # [linux]
-        - libxkbcommon  # [linux]
-        - xorg-libxcomposite  # [linux]
-        - xorg-libxcursor  # [linux]
-        - xorg-libxscrnsaver  # [linux]
-        - xorg-libxi  # [linux]
-        - xorg-libxtst  # [linux]
-        - xorg-libxrandr  # [linux]
         - openjdk
         - soci-postgresql
         - soci-core
         - soci-sqlite
-        - libpq
-        - qt-main
-        - qt-webengine
-        - libuuid  # [linux]
-        - bzip2
-        - zlib
-        - pango
-        - sqlite
-        - libcups  # [linux]
-        - openssl
         - hunspell
         - hunspell-en
         - pandoc
         - mathjax
-        - yaml-cpp
-        - libjpeg-turbo   # [osx]
-        - libpng  # [osx]
         - {{ pin_compatible("quarto", max_pin="x.x") }}
     test:
       commands:
