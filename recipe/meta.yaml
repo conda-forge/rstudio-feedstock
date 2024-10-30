@@ -36,22 +36,22 @@ outputs:
       build:
         - {{ stdlib('c') }}
         - {{ compiler('cxx') }}
-        - make
-        - cmake
         - ant
-        - yarn
-        - wget
-        - ripgrep
-        - coreutils  # [osx]
-        - patchelf  # [linux]
-        - unzip
+        - cmake
+        - coreutils     # [osx]
+        - make
         - nodejs >=18
-        - {{ cdt('mesa-libgl-devel') }}  # [linux]
+        - patchelf      # [linux]
+        - ripgrep
+        - unzip
+        - wget
+        - yarn
         - {{ cdt('mesa-dri-drivers') }}  # [linux]
+        - {{ cdt('mesa-libgl-devel') }}  # [linux]
         - {{ cdt('libselinux') }}  # [linux]
+        - {{ cdt('libxext') }}     # [linux]
         - {{ cdt('libxdamage') }}  # [linux]
         - {{ cdt('libxxf86vm') }}  # [linux]
-        - {{ cdt('libxext') }}     # [linux]
       host:
         - bzip2
         - hunspell
