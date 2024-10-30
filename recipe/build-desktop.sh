@@ -108,3 +108,5 @@ fi
 
 ## Cleanup
 rm -rf ${PREFIX}/opt/rstudio-tools
+# avoid clobbering due to some weird interaction with gfortran
+rm -rf ${PREFIX}/lib/gcc
