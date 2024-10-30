@@ -92,22 +92,22 @@ outputs:
         - libpng  # [osx]
         - quarto
       run:
+        - hunspell
+        - hunspell-en
+        - mathjax
+        - openjdk
+        - pandoc
+        - {{ pin_compatible("quarto", max_pin="x.x") }}
         - r-purrr
-        - r-rmarkdown
         - r-renv
+        - r-rmarkdown
+        - r-rstudioapi
         - r-testthat
         - r-xml2
         - r-yaml
-        - r-rstudioapi
-        - openjdk
-        - soci-postgresql
         - soci-core
+        - soci-postgresql
         - soci-sqlite
-        - hunspell
-        - hunspell-en
-        - pandoc
-        - mathjax
-        - {{ pin_compatible("quarto", max_pin="x.x") }}
     test:
       commands:
         - test -f ${PREFIX}/lib/rstudio/bin/rstudio  # [linux]
