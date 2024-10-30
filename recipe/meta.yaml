@@ -13,6 +13,7 @@ source:
   patches:
     - patches/0001-do-not-use-boost-statically.patch
     - patches/0002-do-not-install-node.patch
+    - patches/0003-use-our-own-nodejs-yarn.patch
 
 build:
   number: {{ upstream_build_num + build }}
