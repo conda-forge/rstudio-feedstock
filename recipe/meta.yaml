@@ -86,7 +86,7 @@ outputs:
         - hunspell
         - hunspell-en
         - pandoc
-        - mathjax <3.0
+        - mathjax
         - yaml-cpp
         - libjpeg-turbo   # [osx]
         - libpng  # [osx]
@@ -125,7 +125,7 @@ outputs:
         - hunspell
         - hunspell-en
         - pandoc
-        - mathjax <3.0
+        - mathjax
         - yaml-cpp
         - libjpeg-turbo   # [osx]
         - libpng  # [osx]
