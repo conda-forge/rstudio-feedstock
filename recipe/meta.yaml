@@ -87,7 +87,7 @@ outputs:
         - hunspell-en
         - pandoc
         - mathjax <3.0
-        - yaml-cpp <0.7
+        - yaml-cpp
         - libjpeg-turbo   # [osx]
         - libpng  # [osx]
         - quarto
@@ -126,7 +126,7 @@ outputs:
         - hunspell-en
         - pandoc
         - mathjax <3.0
-        - yaml-cpp <0.7
+        - yaml-cpp
         - libjpeg-turbo   # [osx]
         - libpng  # [osx]
         - {{ pin_compatible("quarto", max_pin="x.x") }}
