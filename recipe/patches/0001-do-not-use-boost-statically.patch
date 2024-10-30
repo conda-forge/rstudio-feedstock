@@ -1,4 +1,4 @@
-From bb4eec526f950dbb797995cd233951250fcd0744 Mon Sep 17 00:00:00 2001
+From 5d94fb34ed966c1e006cf6e077396a899565c046 Mon Sep 17 00:00:00 2001
 From: Wolf Vollprecht <w.vollprecht@gmail.com>
 Date: Mon, 8 Apr 2024 13:56:28 +0200
 Subject: [PATCH 1/2] do not use boost statically
@@ -22,10 +22,10 @@ index 99a4eba1cc..dd013705fd 100644
                          "-DSOCI_TESTS=OFF ",
                          "-DSOCI_SHARED=OFF ",
 diff --git a/src/cpp/CMakeLists.txt b/src/cpp/CMakeLists.txt
-index b47f04f84d..87dc64504c 100644
+index ca5c23a0e9..cb24ad4452 100644
 --- a/src/cpp/CMakeLists.txt
 +++ b/src/cpp/CMakeLists.txt
-@@ -241,7 +241,7 @@ endif()
+@@ -244,7 +244,7 @@ endif()
  # unless we are building a non-packaged build on linux (in which case
  # boost dynamic libraries are presumed to be installed on the system ldpath)
  if(APPLE OR WIN32 OR RSTUDIO_PACKAGE_BUILD)
@@ -34,7 +34,7 @@ index b47f04f84d..87dc64504c 100644
  endif()
  
  # default Boost versions
-@@ -278,7 +278,7 @@ if(UNIX)
+@@ -281,7 +281,7 @@ if(UNIX)
        add_definitions(-DRSTUDIO_BOOST_NAMESPACE=rstudio_boost)
  
        # find headers
