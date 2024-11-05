@@ -82,6 +82,8 @@ cmake -S . -B build ${CMAKE_ARGS} \
       -DBOOST_INCLUDEDIR=${PREFIX}/include/boost \
       -DBOOST_LIBRARYDIR=${PREFIX}/lib \
       -DQUARTO_ENABLED=TRUE \
+      -DRSTUDIO_CMAKE_NODE_TOOLS_INCLUDED=OFF \
+      -DRSTUDIO_ELECTRON=TRUE \
       -DRSTUDIO_DISABLE_CRASHPAD=1 \
       -DRSTUDIO_CRASHPAD_ENABLED=FALSE \
       -DRSTUDIO_BUNDLE_QT=FALSE \
@@ -108,3 +110,5 @@ fi
 
 ## Cleanup
 rm -rf ${PREFIX}/opt/rstudio-tools
+# avoid clobbering due to some weird interaction with gfortran
+rm -rf ${PREFIX}/lib/gcc

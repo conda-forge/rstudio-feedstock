@@ -1,4 +1,4 @@
-{% set version = "2024.04.2+764" %}
+{% set version = "2024.09.0+375" %}
 {% set pkg_version = version.split("+")[0] %}
 {% set build = 0 %}
 {% set upstream_build_num = version.split("+")[1] | int %}
@@ -9,10 +9,11 @@ package:
 
 source:
   url: https://github.com/rstudio/rstudio/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 89b0d6741b6bd4dac52fd8bd9372d4f1919c97dd41056a03c975d0570eaf439e
+  sha256: 8a29b77c53a3db8379d824a9f4a491843036003d105ed71981cd40fe39d2c8c8
   patches:
     - patches/0001-do-not-use-boost-statically.patch
     - patches/0002-do-not-install-node.patch
+    - patches/0003-use-our-own-nodejs-yarn.patch
 
 build:
   number: {{ upstream_build_num + build }}
@@ -35,100 +36,80 @@ outputs:
       build:
         - {{ stdlib('c') }}
         - {{ compiler('cxx') }}
-        - make
-        - cmake
         - ant
-        - yarn
-        - wget
-        - ripgrep
-        - coreutils  # [osx]
-        - patchelf  # [linux]
-        - unzip
+        - cmake
+        - coreutils     # [osx]
+        - make
         - nodejs >=18
-        - {{ cdt('mesa-libgl-devel') }}  # [linux]
+        - patchelf      # [linux]
+        - ripgrep
+        - unzip
+        - wget
+        - yarn
         - {{ cdt('mesa-dri-drivers') }}  # [linux]
+        - {{ cdt('mesa-libgl-devel') }}  # [linux]
         - {{ cdt('libselinux') }}  # [linux]
+        - {{ cdt('libxext') }}     # [linux]
         - {{ cdt('libxdamage') }}  # [linux]
         - {{ cdt('libxxf86vm') }}  # [linux]
-        - {{ cdt('libxext') }}     # [linux]
       host:
-        - r-base
-        - r-purrr
-        - r-rmarkdown
-        - r-renv
-        - r-testthat
-        - r-xml2
-        - r-yaml
-        - r-rstudioapi
-        - libxkbcommon  # [linux]
-        - xorg-libxcomposite  # [linux]
-        - xorg-libxcursor  # [linux]
-        - xorg-libxscrnsaver  # [linux]
-        - xorg-libxi  # [linux]
-        - xorg-libxtst  # [linux]
-        - xorg-libxrandr  # [linux]
-        - openjdk
+        - bzip2
+        - hunspell
+        - hunspell-en
         - libboost-devel
-        - soci-postgresql
-        - soci-core
-        - soci-sqlite
+        - libcups           # [linux]
+        - libjpeg-turbo     # [osx]
+        - libpng            # [osx]
         - libpq
+        - libuuid           # [linux]
+        - libxkbcommon      # [linux]
+        - pandoc
+        - mathjax
+        - openjdk
+        - openssl
+        - pango
         - qt-main
         - qt-webengine
-        - libuuid  # [linux]
-        - bzip2
-        - zlib
-        - pango
-        - sqlite
-        - libcups  # [linux]
-        - openssl
-        - hunspell
-        - hunspell-en
-        - pandoc
-        - mathjax <3.0
-        - yaml-cpp <0.7
-        - libjpeg-turbo   # [osx]
-        - libpng  # [osx]
         - quarto
-      run:
         - r-base
         - r-purrr
-        - r-rmarkdown
         - r-renv
+        - r-rmarkdown
+        - r-rstudioapi
         - r-testthat
         - r-xml2
         - r-yaml
-        - r-rstudioapi
-        - libxkbcommon  # [linux]
-        - libxkbcommon  # [linux]
-        - xorg-libxcomposite  # [linux]
-        - xorg-libxcursor  # [linux]
-        - xorg-libxscrnsaver  # [linux]
-        - xorg-libxi  # [linux]
-        - xorg-libxtst  # [linux]
-        - xorg-libxrandr  # [linux]
-        - openjdk
-        - soci-postgresql
+        # build calls node-gyp which wants to import distutils
+        - setuptools
         - soci-core
+        - soci-postgresql
         - soci-sqlite
-        - libpq
-        - qt-main
-        - qt-webengine
-        - libuuid  # [linux]
-        - bzip2
-        - zlib
-        - pango
         - sqlite
-        - libcups  # [linux]
-        - openssl
+        - xorg-libxcomposite    # [linux]
+        - xorg-libxcursor       # [linux]
+        - xorg-libxi            # [linux]
+        - xorg-libxrandr        # [linux]
+        - xorg-libxscrnsaver    # [linux]
+        - xorg-libxtst          # [linux]
+        - yaml-cpp
+        - zlib
+      run:
         - hunspell
         - hunspell-en
+        - mathjax
+        - openjdk
         - pandoc
-        - mathjax <3.0
-        - yaml-cpp <0.7
-        - libjpeg-turbo   # [osx]
-        - libpng  # [osx]
         - {{ pin_compatible("quarto", max_pin="x.x") }}
+        - r-purrr
+        - r-renv
+        - r-rmarkdown
+        - r-rstudioapi
+        - r-testthat
+        - r-xml2
+        - r-yaml
+        - soci-core
+        - soci-postgresql
+        - soci-sqlite
     test:
       commands:
         - test -f ${PREFIX}/lib/rstudio/bin/rstudio  # [linux]
