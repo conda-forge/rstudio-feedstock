@@ -45,12 +45,7 @@ outputs:
         - patchelf  # [linux]
         - unzip
         - nodejs >=18
-        - {{ cdt('mesa-libgl-devel') }}  # [linux]
-        - {{ cdt('mesa-dri-drivers') }}  # [linux]
-        - {{ cdt('libselinux') }}  # [linux]
-        - {{ cdt('libxdamage') }}  # [linux]
-        - {{ cdt('libxxf86vm') }}  # [linux]
-        - {{ cdt('libxext') }}     # [linux]
+        - {{ cdt('pam-devel') }}    # [linux]
       host:
         - r-base
         - r-purrr
@@ -60,6 +55,7 @@ outputs:
         - r-xml2
         - r-yaml
         - r-rstudioapi
+        - libgl-devel               # [linux]
         - libxkbcommon  # [linux]
         - xorg-libxcomposite  # [linux]
         - xorg-libxcursor  # [linux]
