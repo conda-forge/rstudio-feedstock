@@ -55,36 +55,36 @@ outputs:
         - r-xml2
         - r-yaml
         - r-rstudioapi
-        - libgl-devel               # [linux]
-        - libxkbcommon  # [linux]
-        - xorg-libxcomposite  # [linux]
-        - xorg-libxcursor  # [linux]
-        - xorg-libxscrnsaver  # [linux]
-        - xorg-libxi  # [linux]
-        - xorg-libxtst  # [linux]
-        - xorg-libxrandr  # [linux]
-        - openjdk
         - libboost-devel
+        - libcups                   # [linux]
+        - libgl-devel               # [linux]
+        - libjpeg-turbo             # [osx]
+        - libpng                    # [osx]
+        - libpq
+        - libuuid                   # [linux]
+        - libxkbcommon              # [linux]
+        - xorg-libxcomposite        # [linux]
+        - xorg-libxcursor           # [linux]
+        - xorg-libxscrnsaver        # [linux]
+        - xorg-libxi                # [linux]
+        - xorg-libxtst              # [linux]
+        - xorg-libxrandr            # [linux]
+        - openjdk
         - soci-postgresql
         - soci-core
         - soci-sqlite
-        - libpq
         - qt-main
         - qt-webengine
-        - libuuid  # [linux]
         - bzip2
         - zlib
         - pango
         - sqlite
-        - libcups  # [linux]
         - openssl
         - hunspell
         - hunspell-en
         - pandoc
         - mathjax <3.0
         - yaml-cpp <0.7
-        - libjpeg-turbo   # [osx]
-        - libpng  # [osx]
         - quarto
       run:
         - r-base
@@ -95,35 +95,16 @@ outputs:
         - r-xml2
         - r-yaml
         - r-rstudioapi
-        - libxkbcommon  # [linux]
-        - libxkbcommon  # [linux]
-        - xorg-libxcomposite  # [linux]
-        - xorg-libxcursor  # [linux]
-        - xorg-libxscrnsaver  # [linux]
-        - xorg-libxi  # [linux]
-        - xorg-libxtst  # [linux]
-        - xorg-libxrandr  # [linux]
         - openjdk
         - soci-postgresql
         - soci-core
         - soci-sqlite
-        - libpq
-        - qt-main
-        - qt-webengine
-        - libuuid  # [linux]
-        - bzip2
-        - zlib
         - pango
-        - sqlite
-        - libcups  # [linux]
-        - openssl
         - hunspell
         - hunspell-en
         - pandoc
         - mathjax <3.0
         - yaml-cpp <0.7
-        - libjpeg-turbo   # [osx]
-        - libpng  # [osx]
         - {{ pin_compatible("quarto", max_pin="x.x") }}
     test:
       commands:
