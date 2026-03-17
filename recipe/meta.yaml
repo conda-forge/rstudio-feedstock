@@ -1,6 +1,6 @@
 {% set version = "2024.04.2+764" %}
 {% set pkg_version = version.split("+")[0] %}
-{% set build = 0 %}
+{% set build = 1 %}
 {% set upstream_build_num = version.split("+")[1] | int %}
 
 package:
@@ -45,12 +45,6 @@ outputs:
         - patchelf  # [linux]
         - unzip
         - nodejs >=18
-        - {{ cdt('mesa-libgl-devel') }}  # [linux]
-        - {{ cdt('mesa-dri-drivers') }}  # [linux]
-        - {{ cdt('libselinux') }}  # [linux]
-        - {{ cdt('libxdamage') }}  # [linux]
-        - {{ cdt('libxxf86vm') }}  # [linux]
-        - {{ cdt('libxext') }}     # [linux]
       host:
         - r-base
         - r-purrr
@@ -90,6 +84,7 @@ outputs:
         - libjpeg-turbo   # [osx]
         - libpng  # [osx]
         - quarto
+        - libgl-devel                    # [linux]
       run:
         - r-base
         - r-purrr
