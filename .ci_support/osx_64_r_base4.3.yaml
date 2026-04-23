@@ -15,7 +15,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '18'
 libboost_devel:
 - '1.84'
 libjpeg_turbo:
@@ -23,7 +23,7 @@ libjpeg_turbo:
 libpng:
 - '1.6'
 libpq:
-- '16'
+- '17'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
