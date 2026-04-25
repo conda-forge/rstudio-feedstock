@@ -1,13 +1,13 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.13'
+- '11.0'
 MACOSX_SDK_VERSION:
-- '10.13'
+- '11.0'
 bzip2:
 - '1'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
-- '10.13'
+- '11.0'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,19 +15,19 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '19'
 libboost_devel:
-- '1.84'
+- '1.90'
 libjpeg_turbo:
 - '3'
 libpng:
 - '1.6'
 libpq:
-- '16'
+- '18'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 openssl:
-- '3'
+- '3.5'
 pango:
 - '1'
 pin_run_as_build:
